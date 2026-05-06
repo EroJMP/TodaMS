@@ -19,6 +19,11 @@ $memberController = new MemberController();
 $violationController = new ViolationController();
 $paymentController = new PaymentController();
 $notificationController = new NotificationController();
+$reportController = new ReportController();
+$auditController = new AuditController();
+$userController = new UserController();
+$systemController = new SystemController();
+$settingsController = new SettingsController();
 
 if ($route === '/' || $route === '/login') {
     if ($method === 'GET') {
@@ -93,6 +98,14 @@ if ($route === '/payments' && $method === 'POST') {
     $paymentController->store();
     return;
 }
+if ($route === '/payments/submit-proof' && $method === 'POST') {
+    $paymentController->submitProof();
+    return;
+}
+if ($route === '/payments/cash-pay' && $method === 'POST') {
+    $paymentController->cashPay();
+    return;
+}
 if ($route === '/payments/paid' && $method === 'POST') {
     $paymentController->markPaid();
     return;
@@ -101,9 +114,66 @@ if ($route === '/payments/reject' && $method === 'POST') {
     $paymentController->reject();
     return;
 }
+if ($route === '/payments/flag' && $method === 'POST') {
+    $paymentController->flag();
+    return;
+}
+if ($route === '/payments/activity-fee' && $method === 'POST') {
+    $paymentController->generateActivityFee();
+    return;
+}
 
 if ($route === '/notifications' && $method === 'GET') {
     $notificationController->index();
+    return;
+}
+
+if ($route === '/reports' && $method === 'GET') {
+    $reportController->index();
+    return;
+}
+
+if ($route === '/audit-logs' && $method === 'GET') {
+    $auditController->index();
+    return;
+}
+
+if ($route === '/users' && $method === 'GET') {
+    $userController->index();
+    return;
+}
+if ($route === '/users' && $method === 'POST') {
+    $userController->store();
+    return;
+}
+if ($route === '/users/activate' && $method === 'POST') {
+    $userController->activate();
+    return;
+}
+if ($route === '/users/deactivate' && $method === 'POST') {
+    $userController->deactivate();
+    return;
+}
+
+if ($route === '/system-tools' && $method === 'GET') {
+    $systemController->index();
+    return;
+}
+if ($route === '/system-tools/backup' && $method === 'POST') {
+    $systemController->backup();
+    return;
+}
+
+if ($route === '/settings' && $method === 'GET') {
+    $settingsController->index();
+    return;
+}
+if ($route === '/settings/profile' && $method === 'POST') {
+    $settingsController->updateProfile();
+    return;
+}
+if ($route === '/settings/password' && $method === 'POST') {
+    $settingsController->updatePassword();
     return;
 }
 

@@ -13,8 +13,9 @@ class NotificationController
     {
         AuthMiddleware::handle();
         $user = $_SESSION['user'];
-        $notifications = $this->service->byRole($user['role']);
+        $notifications = $this->service->byRecipient((string) $user['role'], (int) ($user['id'] ?? 0));
         $pageTitle = 'Notifications';
+        $currentRoute = '/notifications';
         require __DIR__ . '/../../resources/views/notifications/index.php';
     }
 }

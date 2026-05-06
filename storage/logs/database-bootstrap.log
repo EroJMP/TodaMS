@@ -1,0 +1,8 @@
+[2026-05-06 23:16:35] Call to undefined method DatabaseBootstrapService::migrateViolationsForPhase5() in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:21
+[2026-05-06 23:16:36] Call to undefined method DatabaseBootstrapService::migrateViolationsForPhase5() in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:21
+[2026-05-06 23:16:56] Call to undefined method DatabaseBootstrapService::migrateViolationsForPhase5() in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:21
+[2026-05-06 23:16:56] Call to undefined method DatabaseBootstrapService::migrateViolationsForPhase5() in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:21
+[2026-05-07 02:14:52] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '279' for key 'member_id' in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:822
+[2026-05-07 02:15:00] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '279' for key 'member_id' in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:822
+[2026-05-07 02:15:00] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '279' for key 'member_id' in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:822
+[2026-05-07 02:15:28] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '279' for key 'member_id' in C:\xampp\htdocs\TodaMS\app\services\DatabaseBootstrapService.php:822

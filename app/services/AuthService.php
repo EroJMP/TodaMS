@@ -2,34 +2,32 @@
 
 class AuthService
 {
-    /**
-     * Phase 1 placeholder auth.
-     * Replace with database-backed authentication in Phase 2.
-     */
     public function attempt(string $username, string $password): ?array
     {
-        $demoUsers = [
-            'admin' => ['password' => 'admin123', 'role' => 'super_admin', 'name' => 'Super Admin'],
-            'vp' => ['password' => 'vp123', 'role' => 'vice_president', 'name' => 'Vice President'],
-            'secretary' => ['password' => 'secretary123', 'role' => 'secretary', 'name' => 'Secretary'],
-            'treasurer' => ['password' => 'treasurer123', 'role' => 'treasurer', 'name' => 'Treasurer'],
-            'compliance' => ['password' => 'compliance123', 'role' => 'compliance_officer', 'name' => 'Compliance Officer'],
-            'driver' => ['password' => 'driver123', 'role' => 'driver', 'name' => 'Driver'],
-        ];
-
-        if (!isset($demoUsers[$username])) {
+        $pdo = Database::connection();
+        $stmt = $pdo->prepare(
+            'SELECT u.id, u.username, u.password, u.role, m.name
+             FROM users u
+             INNER JOIN members m ON m.id = u.member_id
+             WHERE u.username = :username AND u.is_active = 1
+             ORDER BY u.id DESC
+             LIMIT 1'
+        );
+        $stmt->execute([':username' => trim($username)]);
+        $user = $stmt->fetch();
+        if (!is_array($user)) {
             return null;
         }
 
-        $user = $demoUsers[$username];
-        if ($user['password'] !== $password) {
+        if ((string) $user['password'] !== $password) {
             return null;
         }
 
         return [
-            'username' => $username,
-            'name' => $user['name'],
-            'role' => $user['role'],
+            'id' => (int) $user['id'],
+            'username' => (string) $user['username'],
+            'name' => (string) ($user['name'] ?? $user['username']),
+            'role' => (string) $user['role'],
         ];
     }
 }

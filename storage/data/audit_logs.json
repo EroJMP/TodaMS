@@ -1,0 +1,209 @@
+[
+    {
+        "id": 1,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "vp",
+        "role": "vice_president",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:29:31"
+    },
+    {
+        "id": 2,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:32:00"
+    },
+    {
+        "id": 3,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:32:09"
+    },
+    {
+        "id": 4,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "vp",
+        "role": "vice_president",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:32:13"
+    },
+    {
+        "id": 5,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "vp",
+        "role": "vice_president",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:32:33"
+    },
+    {
+        "id": 6,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "treasurer",
+        "role": "treasurer",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:33:03"
+    },
+    {
+        "id": 7,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "treasurer",
+        "role": "treasurer",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:33:17"
+    },
+    {
+        "id": 8,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "driver",
+        "role": "driver",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:33:25"
+    },
+    {
+        "id": 9,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "driver",
+        "role": "driver",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:36:34"
+    },
+    {
+        "id": 10,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "compliance",
+        "role": "compliance_officer",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:36:50"
+    },
+    {
+        "id": 11,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "compliance",
+        "role": "compliance_officer",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:50:53"
+    },
+    {
+        "id": 12,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 19:55:27"
+    },
+    {
+        "id": 13,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:11:47"
+    },
+    {
+        "id": 14,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:11:56"
+    },
+    {
+        "id": 15,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:12:17"
+    },
+    {
+        "id": 16,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:21:52"
+    },
+    {
+        "id": 17,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:21:55"
+    },
+    {
+        "id": 18,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:21:58"
+    },
+    {
+        "id": 19,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:22:02"
+    },
+    {
+        "id": 20,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:24:01"
+    },
+    {
+        "id": 21,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "vp",
+        "role": "vice_president",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:24:12"
+    },
+    {
+        "id": 22,
+        "action": "LOGOUT",
+        "details": "User logged out.",
+        "username": "vp",
+        "role": "vice_president",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:26:59"
+    },
+    {
+        "id": 23,
+        "action": "LOGIN_SUCCESS",
+        "details": "User logged in successfully.",
+        "username": "admin",
+        "role": "super_admin",
+        "ip": "::1",
+        "created_at": "2026-05-06 20:27:05"
+    }
+]
