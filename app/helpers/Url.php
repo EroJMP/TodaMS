@@ -18,6 +18,16 @@ class Url
         $base = self::basePath();
         $cleanPath = '/' . ltrim($path, '/');
 
-        return $base . $cleanPath;
+        // Assets should be served directly.
+        if (str_starts_with($cleanPath, '/assets/')) {
+            return $base . $cleanPath;
+        }
+
+        // No rewrite required: route through index.php query parameter.
+        if ($cleanPath === '/') {
+            return $base . '/index.php';
+        }
+
+        return $base . '/index.php?route=' . rawurlencode(ltrim($cleanPath, '/'));
     }
 }

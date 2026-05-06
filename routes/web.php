@@ -1,11 +1,17 @@
 <?php
 
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
 
-$base = Url::basePath();
-$route = str_starts_with($path, $base) ? substr($path, strlen($base)) : $path;
-$route = $route === '' ? '/' : $route;
+$routeFromQuery = isset($_GET['route']) ? trim((string) $_GET['route']) : '';
+if ($routeFromQuery !== '') {
+    $route = '/' . trim(rawurldecode($routeFromQuery), '/');
+} else {
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $base = Url::basePath();
+    $route = str_starts_with($path, $base) ? substr($path, strlen($base)) : $path;
+    $route = preg_replace('#^/index\.php#', '', $route) ?? $route;
+    $route = $route === '' ? '/' : $route;
+}
 
 $authController = new AuthController();
 $dashboardController = new DashboardController();
